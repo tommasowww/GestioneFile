@@ -41,9 +41,8 @@ public class GestioneFile {
         String outputFile = "copia.csv";
 
         try {
-            // Copia il contenuto da file a file
+            // copia il contenuto da file a file
             Files.copy(Paths.get(inputFile), Paths.get(outputFile), StandardCopyOption.REPLACE_EXISTING);
-
             System.out.println("File copiato con successo");
         } catch (Exception e) {
             System.err.println("Errore durante la copia del file: " + e.getMessage());

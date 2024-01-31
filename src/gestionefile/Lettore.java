@@ -22,7 +22,7 @@ public class Lettore extends Thread{
      */
     public void leggi() {
         try (FileReader fr = new FileReader(nomeFile)) {
-            // Legge carattere per carattere e lo stampa
+            // legge carattere per carattere e stampa
             int i;
             while ((i = fr.read()) != -1) {
                 System.out.print((char) i);

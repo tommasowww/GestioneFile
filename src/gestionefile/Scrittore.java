@@ -28,10 +28,10 @@ public class Scrittore implements Runnable{
      */
     public void scrivi() {
         try (BufferedWriter br = new BufferedWriter(new FileWriter(nomeFile))) {
-            // Scrivo nel buffer
+            // scrivo nel buffer
             br.write("File in output");
             br.write("\n\r");
-            // Svuoto il buffer e salvo nel file i dati
+            // svuota il buffer e salva i dati
             br.flush();
         } catch (IOException ex) {
             Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
