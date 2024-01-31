@@ -8,16 +8,18 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author MC
+ * @author tommasowww
  * @version 12/01/23
  */
 
 public class Scrittore implements Runnable{
 
     String nomeFile;
+    String messaggio;
     
-    public Scrittore(String nomeFile){
+    public Scrittore(String nomeFile, String messaggio){
         this.nomeFile = nomeFile;
+        this.messaggio = messaggio;
     }
     
     @Override
