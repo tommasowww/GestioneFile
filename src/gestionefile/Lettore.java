@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
  *
  * @author tommasowww
- * @ 12/01/23
+ * @ 31/01/23
  */
 
 public class Lettore extends Thread{
@@ -20,19 +20,15 @@ public class Lettore extends Thread{
      * Legge il file senza tener conto del tipo di file
      * e lo mostra in output
      */
-    public void leggi(){
-        FileReader fr;
-        int i; 
-        try { 
-            //1) apro il file
-            fr = new FileReader(nomeFile);
-            //2) leggo carattere per carattere e lo stampo 
-            while ((i=fr.read()) != -1)
+    public void leggi() {
+        try (FileReader fr = new FileReader(nomeFile)) {
+            // Legge carattere per carattere e lo stampa
+            int i;
+            while ((i = fr.read()) != -1) {
                 System.out.print((char) i);
-            
+            }
+
             System.out.print("\n\r");
-            //3) chiudo il file
-            fr.close();
         } catch (IOException ex) {
             System.err.println("Errore in lettura!");
         }
