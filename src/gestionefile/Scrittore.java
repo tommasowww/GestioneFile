@@ -6,7 +6,7 @@ import java.util.logging.*;
 /**
  *
  * @author tommasowww
- * @version 31/01/23
+ * @version 31/01/24
  */
 
 public class Scrittore implements Runnable{
@@ -29,7 +29,7 @@ public class Scrittore implements Runnable{
     public void scrivi() {
         try (BufferedWriter br = new BufferedWriter(new FileWriter(nomeFile))) {
             // scrivo nel buffer
-            br.write("File in output");
+            br.write(messaggio);
             br.write("\n\r");
             // svuota il buffer e salva i dati
             br.flush();

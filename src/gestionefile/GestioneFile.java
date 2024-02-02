@@ -7,7 +7,7 @@ import java.nio.file.*;
 /**
  *
  * @author tommasowww
- * @version 31/01/23
+ * @version 31/01/24
  */
 public class GestioneFile {
 
@@ -32,7 +32,7 @@ public class GestioneFile {
         scanner.close();
 
         //3) SCRITTURA
-        Scrittore scrittore = new Scrittore("output.csv", nomeUtente + ";" + password);
+        Scrittore scrittore = new Scrittore("output.csv", nomeUtente + "; " + password);
         Thread threadScrittore = new Thread(scrittore);
         threadScrittore.start();
 

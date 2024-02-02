@@ -6,7 +6,7 @@ import java.io.IOException;
 /**
  *
  * @author tommasowww
- * @ 31/01/23
+ * @ 31/01/24
  */
 
 public class Lettore extends Thread{
